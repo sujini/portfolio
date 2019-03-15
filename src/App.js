@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import  { BrowserRouter  } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import DelayRoute from './animations/DelayRoute';
+import Animation from './animations/Animation';
 import './App.css';
-
 class App extends Component {
+  state = {
+    isOpened: false
+  }
+  componentDidMount() {
+    Animation.openPreLoad(()=>{
+      this.setState({ isOpened: true })
+    });
+  }
+ 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <div id="open_preload">
+              <div className="left"><div className="bg"></div><div className="text">sujini</div></div>
+              <div className="right"><div className="bg"></div><div className="text">Bak</div></div>
+              <div className="center_line"></div>
+          </div>
+          <Navbar/>
+          <DelayRoute isOpened={this.state.isOpened}/>
+          
+        </div>
+      </BrowserRouter>
     );
   }
 }

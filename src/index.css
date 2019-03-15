@@ -1,14 +1,74 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+/* HTML5 RESET CSS Document */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;background:transparent;font-size:100%;vertical-align:middle;outline:0;-webkit-text-size-adjust:none}
+html,body{width:100%;height:100%; -webkit-font-smoothing:antialiased;}
+
+/* BODY 관련 색상조절 */
+body,input,button,textarea{font-size:12px;line-height:1.5em; font-family: 'Noto Sans KR',Helvetica,Dotum; color:#000000}
+h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:normal;text-align:left}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+img,fieldset,iframe{border:0 none}
+table,div{border-collapse:collapse}
+select,textarea{border:1px solid #B7B6B6;background:#FFF;font-size:12px;color:#000;vertical-align:middle}
+textarea{overflow:auto}
+select,input,img,li{text-align:left;vertical-align:middle}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:normal;font-weight:normal}
+ul,li,ol{list-style-type:none}
+legend,caption{display:none}
+blockquote,q{quotes:'none'}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:'none' }
+
+/* LINK 관련 색상조절 */
+a,button{margin:0;padding:0;background:transparent; vertical-align:baseline;-webkit-appearance: none;border:0;cursor: pointer;text-decoration: none}
+a:link,a:visited{color:#000;text-decoration:none}
+a:hover{text-decoration:none;cursor:pointer}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;font-style:italic;font-weight:bold;color:#282828}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+hr{border-collapse:collapse}
+body,.wrap{background: url(https://sujini.github.io/english/img/bg_pattern.jpg) repeat}
+
+.l0{left: 0;}
+.l10{left: 10%;}
+.l20{left: 20%;}
+.l30{left: 30%;}
+.l40{left: 40%;}
+.l50{left: 50%;}
+.l60{left: 60%;}
+.l70{left: 70%;}
+.l80{left: 80%;}
+.l90{left: 90%;}
+.t0{top: 0;}
+.t10{top: 10%;}
+.t20{top: 20%;}
+.t30{top: 30%;}
+.t40{top: 40%;}
+.t50{top: 50%;}
+.t60{top: 60%;}
+.t70{top: 70%;}
+.t80{top: 80%;}
+.t90{top: 90%;}
+.w0{width: 0;}
+.w10{width: 10%;}
+.w20{width: 20%;}
+.w30{width: 30%;}
+.w40{width: 40%;}
+.w50{width: 50%;}
+.w60{width: 60%;}
+.w70{width: 70%;}
+.w80{width: 80%;}
+.w90{width: 90%;}
+.h0{height: 0;}
+.h10{height: 10%;}
+.h20{height: 20%;}
+.h30{height: 30%;}
+.h40{height: 40%;}
+.h50{height: 50%;}
+.h60{height: 60%;}
+.h70{height: 70%;}
+.h80{height: 80%;}
+.h90{height: 90%;}
+.h100{height: 100%;}

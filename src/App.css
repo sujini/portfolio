@@ -1,33 +1,92 @@
-.App {
+
+/*.wrapper, body {position: relative;}
+.wrapper{overflow: hidden}*/
+.cb{clear: both}
+[class*=" icon-"], [class^=icon-] {font-family: icomoon!important;speak: none;font-style: normal;font-weight: 400;font-variant: normal;text-transform: none;line-height: 1;}
+*, [class*=" icon-"], [class^=icon-] {-webkit-font-smoothing: antialiased;    -moz-osx-font-smoothing: grayscale;}
+.icon-arrow:before{content:"\e900"}
+.icon-close .path1:before{content:"\e901";color:#000}
+.icon-close .path2:before{content:"\e902";margin-left:-1em;color:#fff}
+.icon-zoom .path1:before{content:"\e903";color:#000}
+.icon-zoom .path2:before{content:"\e904";margin-left:-1em;color:#fff}
+.icon-logoSticky:before{content:"\e905"}
+.icon-logo:before{content:"\e906"}
+body.page-template-tpl-identity {background-color: #000;}
+body.page-template-tpl-workshop {background-color: #000;}
+#preload {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 11;
+  font-size: 100px;
+  line-height: 100px;
+  color: #000;
   text-align: center;
 }
+.wrap {margin: 0 auto;position: relative;width: 100%;padding: 0 14px;max-width: 976px;}
+#open_preload{position: fixed;top:0;left:0;right:0;bottom:0;z-index: 999}
+#open_preload .left{position: absolute;left:0;width: 50%;height: 100%;overflow: hidden;}
+#open_preload .right{position: absolute;left:50%;width: 50%;height: 100%;overflow: hidden;}
+#open_preload .bg{position: absolute;top:0;left:0;right:0;bottom:0;background: #000;overflow: hidden;}
+#open_preload .text{position: absolute;top:50%;color:#fff;font-size: 20px;line-height: 50px;margin-top:-25px;}
+#open_preload .left .text{right: 0;transform: translateX(102%);font-size: 40px;letter-spacing: 10px;font-family: GTSectraDisplay-Light,Helvetica,Arial,sans-serif;}
+#open_preload .right .text{left: 0;transform: translateX(-102%);font-size: 11px;margin-top:-20px;text-transform: uppercase;letter-spacing: 2.5px;font-family: Maison Neue Book,Helvetica,Arial,sans-serif}
+#open_preload .center_line{position: absolute;position: absolute;left: 50%;height:0;bottom:0;width: 1px;background: #333;}
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+.container{background: url(https://sujini.github.io/english/img/bg_main.jpg) repeat-x center top;overflow: hidden;}
+.container.home{min-height: 100vh}
 
-.App-link {
-  color: #61dafb;
-}
+.container .inner{padding: 210px 0 0;max-width: 1000px;margin: 0 auto;}
+.container .center{text-align: center}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.container.home .slide{position: absolute;top:0;left:0;width: 100%;height: 100%;}
+.container.home .slide ul{position: relative;width: 100%;height: 100%;}
+.container.home .slide ul li{position: absolute;top:0;left:0;width: 100%;height: 100%;opacity: 0;}
+.container.home .slide ul li.active{opacity: 1;}
+.container.home .slide ul li h2{position: absolute;top:50%;left:50%;transform: (-50%,-50%);font-size: 30px;font-weight: 700}
+.container.home .slide ul li >div{position: absolute;overflow: hidden;}
+.container.home .slide ul li >div >span{background: #000;transform: translate(-100%,0); display: block;
+  width: 100%;
+  height: 100%;}
+.container.about{display:block;position: relative;clear: both;background: #fff;}
+.container.about .half_line{position: absolute;top:65px;left:50%;margin-left:-1px;width:1px;height:2250px;background-color:#e2e2e2;opacity: 0; }
+.container.about .half_line:before{content:'';display:block;position:absolute;top:0;left:-3px;border:1px solid #c4c4c4;border-radius: 100%;background-color: #c4c4c4;width:5px;height:5px;}
+.container.about .half_line:after{content:'';display:block;position:absolute;bottom:-2.5px;left:-3px;border:1px solid #d9d9d9;border-radius: 50%;background-color: #d9d9d9;width:5px;height:5px;}
+.container.about .half_line.hide{opacity: 0 !important;}
+.container.about .about_list{position: relative; margin: 75px auto 0;}
+.container.about .about_list:before {content:'';width:1px;height:100%;background:#333;position:absolute;left:50%;top:0px;}
+.container.about .about_list ul {position: relative;padding-top: 35px; }
+.container.about .about_list ul:before {content:'';width:5px;height:5px;background:#333;position:absolute;left:50%;top:0;margin-left:-2px;border-radius: 5px}
+.container.about .about_list ul:after {content:'';width:5px;height:5px;background:#333;position:absolute;left:50%;bottom:0;margin-left:-2px;border-radius: 5px}
+.container.about .about_list ul li {position:relative;  padding: 0 0 0 50%}
+.container.about .about_list ul li .year_box {position:relative;}
+.container.about .about_list ul li.left_box {text-align:right;  padding: 0 50% 0 0}
+.container.about .about_list ul li.left_box .year_box {padding: 10px 85px 10px 0;}
+.container.about .about_list ul li.left_box .year_box:before {content:'';width:3px;height:3px;border:1px solid #333;background:#f6f6f6;border-radius:5px;position:absolute;right:-3px;top:5px;z-index:2;}
+.container.about .about_list ul li.left_box .year_box:after {content:'';width:75px;height:1px;position:absolute;right:0;top:7px;border-top:1px solid #ececec;}
+.container.about .about_list ul li.right_box {text-align:left;}
+.container.about .about_list ul li.right_box .year_box {padding: 10px 0 10px 85px;}
+.container.about .about_list ul li.right_box .year_box:before {content:'';width:3px;height:3px;border:1px solid #333;background:#f6f6f6;border-radius:5px;position:absolute;left:-2px;top:5px;z-index:2;}
+.container.about .about_list ul li.right_box .year_box:after {content:'';width:75px;height:1px;position:absolute;left:0;top:7px;border-top:1px solid #ececec;}
+.container.about .about_list ul li .year_box .year {font-size:18px;color:#666;line-height:21px;margin-bottom:5px;}
+.container.about .about_list ul li .year_box .year_text {font-size:16px;line-height:24px;letter-spacing: -0.5px;}
+
+.container.about .center_ci{position: fixed;left:50%;top:241px;margin: 4px 0 0 -44px;width: 88px;height: 88px;border-radius: 100%;text-align: center;opacity: 1;background: #000;color:#fff;z-index: 2;}
+.container.about .center_ci .ci{display:block;position: absolute;opacity: 0;}
+.container.about .center_ci .ci.on{opacity: 1;}
+.container.about .center_ci.on{position: fixed;left:50%;top:241px;}
+.container.about .center_ci.over{position: absolute;left:50%;top:100%;}
+.container.about .center_ci .ci_mask{overflow: hidden;width:88px;}
+.container.about .center_ci>div{position: absolute;top:0;left:0;bottom:0;right:0;line-height: 88px;font-size: 20px;font-weight: bold;opacity: 0;}
+.container.about .center_ci>div.active{opacity: 1;}
+.container.about .center_ci>div.ci_xiilab em{color:#fe7511}
+.container.about .center_ci>div.ci_does{color:#22CACE;}
+.container.about .center_ci>div.ci_diware em{color:#007dc3}
