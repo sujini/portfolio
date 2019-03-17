@@ -3,6 +3,7 @@ import {Route,Switch,withRouter} from 'react-router-dom';
 import Home from '../components/Home';
 import About from '../components/About';
 import Project from '../components/Project';
+import ProjectDetails from '../components/projects/ProjectDetails';
 import {TweenMax} from 'gsap';
 
 class DelayRoute extends Component {    
@@ -12,15 +13,16 @@ class DelayRoute extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log(this.props.isOpened!==nextProps.isOpened);
-      
+        console.log(this.props.isOpened,nextProps.isOpened);
+        
+        /*
       
         if(this.props.isOpened===nextProps.isOpened){
             this.setState({ shouldRender: false })
         }else{
             this.setState({ shouldRender: true })
-        }
-
+        }*/
+        this.setState({ shouldRender: true })
     }
  
   
@@ -55,8 +57,9 @@ class DelayRoute extends Component {
             return(
             <Switch>
                 <Route exact path="/" component={Home} />
-                <Route path="/about" component={About} />           
-                <Route path="/project/:id" component={Project} />         
+                <Route path="/about" component={About} />      
+                <Route exact path="/project" component={Project} />         
+                <Route exact path="/project/:id" component={ProjectDetails} />         
             </Switch>
             )
         }else{

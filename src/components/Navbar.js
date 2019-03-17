@@ -3,11 +3,11 @@ import {NavLink,withRouter} from 'react-router-dom';
 
 class Navbar extends Component {
     state={
-        subNaviOn:false
+        naviOn:false
     }
     handleClick = (e) =>{
         e.preventDefault();
-        this.setState({subNaviOn:!this.state.subNaviOn});
+        this.setState({naviOn:!this.state.naviOn});
 
     }
     getNavLinkClass = (path) => {
@@ -28,20 +28,31 @@ class Navbar extends Component {
     componentWillReceiveProps(nextProps) {
         console.log(nextProps)
        
-        this.setState({subNaviOn:false});
+        this.setState({naviOn:false});
        
     }
     render() {
+        const naviOn = this.state.naviOn?'active':'';
      
         return (      
-            <nav className="nav-wrapper">
+            <nav className={`nav-wrapper ${naviOn}`}>
                 <div className="nav-inner">
-                    <h1 className="center"><img src="./img/title.png" alt="나의 영어사춘기"/></h1>
-                    <ul className="right hide-on-med-and-down">
-                        <li exact="true" className={this.getNavLinkClass("/")}><NavLink exact activeClassName="active" to="/"><img src="./img/btn_home.png" alt="home"/></NavLink></li>
-                        <li className={this.getNavLinkClass("/about")}><NavLink className={this.state.subNaviOn?'on':''} activeClassName="active"  to="/about"><img src="./img/btn_homework.png" alt="about"/></NavLink></li>
-                        <li className={this.getNavLinkClass("/project")}><NavLink className={this.state.subNaviOn?'on':''} activeClassName="active"  to="/project"><img src="./img/btn_homework.png" alt="project"/></NavLink></li>
-                    </ul>
+                    <div className="menu-list">                    
+                        <h1 className="center">sujini</h1>
+                        <ul className="">
+                            <li><NavLink exact activeClassName="active" to="/">home</NavLink></li>
+                            <li><NavLink activeClassName="active"  to="/about">about</NavLink></li>
+                            <li><NavLink activeClassName="active"  to="/project">project</NavLink></li>
+                            <li><a href="https://github.com/sujini" target="_blank">github</a></li>
+                        </ul>
+                    </div>
+                    <a href="/" onClick={this.handleClick}className="btn-menu">
+                        <span><em>M  C</em></span>
+                        <span><em>E  L</em></span>
+                        <span><em>N  S</em></span>
+                        <span><em>U  E</em></span>
+                        
+                    </a>
                     
                 </div>
             </nav>

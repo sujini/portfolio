@@ -1,15 +1,50 @@
-import React from 'react';
+import React, { Component } from 'react';
+import {NavLink,withRouter} from 'react-router-dom';
 
-const ProjectSummary = ({project}) =>{
-    return(
-        <div className="card z-depth-0 project-summary">
-            <div className="card-content grey-text text-darken-3">
-                <span className="card-title">{project.title}</span>
-                <p>{project.content}</p>
-                <p className="grey-text">{project.createdAt.toDate().toString()}</p>
+import {storage} from '../../config/fbConfig';
+class ProjectSummary extends Component {
+    state={
+        imgUrl:''
+    }
+   
+    componentDidMount(){
+        if(this.props.project.imgs){
+        let storageRef = storage.ref(this.props.project.imgs[0]);
+        storageRef.getDownloadURL().then(url=> {
+            this.setState({
+                imgUrl:url
+            })
+          });
+        }
+        
+        
+  
+    }
+    componentWillReceiveProps(nextProps) {
+        console.log(nextProps)
+       
+       
+    }
+  
+    render() {
+        const {project} = this.props;
+        return (      
+            <div className="card z-depth-0 project-summary">
+                <div className="card-content">
+                    <span className="card-title">{project.title}</span>
+                    <p>{project.role[0]}</p>
+                    <p className="grey-text">{project.period}</p>
+                </div>
+                <div className="card-img">
+                    {project.imgs?<img src={this.state.imgUrl} alt=""/>:null
+                    } 
+                            
+                </div>
             </div>
-        </div>
-    )
+        
+
+        );
+    }
 }
 
-export default ProjectSummary;
+export default withRouter(ProjectSummary);

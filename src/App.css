@@ -1,6 +1,24 @@
 
 /*.wrapper, body {position: relative;}
 .wrapper{overflow: hidden}*/
+nav{position: absolute;right: 0; z-index: 99;}
+nav .btn-menu{width: 40px;height: 40px;position: absolute;padding: 0 0 0 10px; right:18px;top:0px;overflow: hidden;}
+nav .btn-menu::after{content: '';position: absolute;top:0;left: 0;width: 3px;height: 40px;background: #333;}
+nav .btn-menu span{font-size: 17px;line-height: 20px; letter-spacing: 2px; color:#333;width: 20px;height: 20px;float: left;overflow: hidden;}
+nav .btn-menu span em{font-weight: 700;transition:all ease-out 0.3s;display: block;white-space: nowrap;width: 40px;text-align: center;margin-left:-2px;}
+nav .menu-list{visibility: hidden;opacity: 0;position: fixed;top:0;left:0;width: 100%;height: 100%;text-align: center;transition:all .3s ease-out}
+nav .menu-list h1{padding: 10vh 10vw 0;font-size: 20px}
+nav .menu-list ul{padding: 10vh 10vw}
+nav .menu-list ul li{position: relative;font-size: 35px;line-height: 40px;font-weight: 700; margin: 20px 0}
+nav .menu-list ul li:after{content: '';position: absolute;left:0;top:85%;transform: scaleX(0); transform-origin: 0 50%;height: 1px;width: 100%;background:#444; transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s}
+nav .menu-list ul li+li:after{transition-delay: 0.3s}
+nav .menu-list ul li+li+li:after{transition-delay: 0.4s}
+nav .menu-list ul li a{transition:all 0.3s ease-out}
+nav.active .btn-menu span em{transform: translateX(-20px)}
+nav.active .menu-list{visibility: visible;opacity: 1;background: #f5cece;color:#444;}
+nav.active .menu-list ul li:after{transform: scaleX(1)}
+nav.active .menu-list ul li:hover a{color:#888}
+nav.active .menu-list ul li:hover:after{background: #888}
 .cb{clear: both}
 [class*=" icon-"], [class^=icon-] {font-family: icomoon!important;speak: none;font-style: normal;font-weight: 400;font-variant: normal;text-transform: none;line-height: 1;}
 *, [class*=" icon-"], [class^=icon-] {-webkit-font-smoothing: antialiased;    -moz-osx-font-smoothing: grayscale;}
@@ -41,22 +59,31 @@ body.page-template-tpl-workshop {background-color: #000;}
 #open_preload .center_line{position: absolute;position: absolute;left: 50%;height:0;bottom:0;width: 1px;background: #333;}
 
 
-.container{background: url(https://sujini.github.io/english/img/bg_main.jpg) repeat-x center top;overflow: hidden;}
+.container{overflow: hidden;}
 .container.home{min-height: 100vh}
 
-.container .inner{padding: 210px 0 0;max-width: 1000px;margin: 0 auto;}
+.container .inner{padding: 50px 0 0;max-width: 1000px;margin: 0 auto;}
 .container .center{text-align: center}
 
 .container.home .slide{position: absolute;top:0;left:0;width: 100%;height: 100%;}
 .container.home .slide ul{position: relative;width: 100%;height: 100%;}
-.container.home .slide ul li{position: absolute;top:0;left:0;width: 100%;height: 100%;opacity: 0;}
-.container.home .slide ul li.active{opacity: 1;}
-.container.home .slide ul li h2{position: absolute;top:50%;left:50%;transform: (-50%,-50%);font-size: 30px;font-weight: 700}
+.container.home .slide ul li{position: absolute;background: #f3eaea; top:0;left:0;width: 100%;height: 100%;opacity: 0;visibility: hidden;}
+.container.home .slide ul li.active{opacity: 1;visibility:visible;}
+.container.home .slide ul li a{position: absolute;top:50%;left:50%;transform: translate(-50%,-50%);}
+.container.home .slide ul li a h2{text-shadow: 1px 1px 7px #aaa}
+.container.home .slide ul li a h2 em{font-size: 55px;font-weight: 700;color:#333;letter-spacing: 1px; display:inline-block;transition: all 0.2s ease-out}
+.container.home .slide ul li a h2 em:nth-child(2){transition-duration: 0.25s;}
+.container.home .slide ul li a h2 em:nth-child(3){transition-duration: 0.3s;}
+.container.home .slide ul li a h2 em:nth-child(4){transition-duration: 0.35s;}
+.container.home .slide ul li a h2 em:nth-child(5){transition-duration: 0.4s;}
+.container.home .slide ul li a h2 em:nth-child(6){transition-duration: 0.45s;}
+.container.home .slide ul li a h2 em:nth-child(7){transition-duration: 0.5s;}
 .container.home .slide ul li >div{position: absolute;overflow: hidden;}
-.container.home .slide ul li >div >span{background: #000;transform: translate(-100%,0); display: block;
+.container.home .slide ul li >div >span{background: #000;text-align: center;  transform: translate(-100%,0); display: block;
   width: 100%;
   height: 100%;}
-.container.about{display:block;position: relative;clear: both;background: #fff;}
+  .container.home .slide ul li >div >span img{width: auto;height: auto;}
+.container.about{display:block;position: relative;clear: both;padding: 0 0 200px}
 .container.about .half_line{position: absolute;top:65px;left:50%;margin-left:-1px;width:1px;height:2250px;background-color:#e2e2e2;opacity: 0; }
 .container.about .half_line:before{content:'';display:block;position:absolute;top:0;left:-3px;border:1px solid #c4c4c4;border-radius: 100%;background-color: #c4c4c4;width:5px;height:5px;}
 .container.about .half_line:after{content:'';display:block;position:absolute;bottom:-2.5px;left:-3px;border:1px solid #d9d9d9;border-radius: 50%;background-color: #d9d9d9;width:5px;height:5px;}
@@ -90,3 +117,89 @@ body.page-template-tpl-workshop {background-color: #000;}
 .container.about .center_ci>div.ci_xiilab em{color:#fe7511}
 .container.about .center_ci>div.ci_does{color:#22CACE;}
 .container.about .center_ci>div.ci_diware em{color:#007dc3}
+
+.container.project .card{position: relative; box-shadow: 0px 0px 15px #999;margin:20px 4%;background: #fff;overflow: hidden;}
+.container.project .card:before{content: '';position: absolute;right:0;top:0;width: 35%;bottom:0;background: #222;}
+.container.project .card .card-content{float:left;height: 100%; width: 65%; padding: 20px;font-size: 15px;line-height: 20px;background: #fff;box-sizing: border-box}
+.container.project .card .card-content .card-title{font-weight: 500;font-size:18px;padding: 0 0 10px;display: block;}
+.container.project .card .card-img{position: relative;float:right;width: 35%;text-align: center;background: #222;}
+.container.project .card .card-img img{width: 80%;padding: 30px 0}
+.container.project-details .inner{padding: 0 0 100px}
+.container.project-details table{border-collapse: collapse;font-size:15px;line-height: 20px;width: 100%;}
+
+.container.project-details table tr:first-child td{border-top:0}
+.container.project-details table tr:first-child th{border-left:0;border-top:0}
+.container.project-details table tr th:first-child{border-left:0;}
+.container.project-details table th{border:2px solid #333;border-bottom:0;border-right:0;padding:10px;font-weight: 700;background: #f5cece}
+.container.project-details table td{border:2px solid #333;border-bottom:0;border-right:0;padding:10px}
+.swiper-wrapper{position: relative;width: 100%;height: 100%;z-index: 1; display: block;white-space: nowrap;}
+.swiper-slide{text-align: center;display: inline-block;vertical-align:middle;height: 100%;width: 100%;}
+.swiper-slide img{max-width: 100%;max-height: 100%;transform: translate( 0 ,-50%);
+  position: relative;
+  top: 50%;}
+.swiper-container {
+  position: relative;z-index: 1;overflow: hidden;
+  max-width: 800px;margin: 0 auto 5vh;
+  width:100%;height: 400px;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #000;
+  opacity: .2;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 4px;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #f5cece;
+}
+
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+}
+
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  -webkit-transition: .3s opacity;
+  -o-transition: .3s opacity;
+  transition: .3s opacity;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  z-index: 10;
+}
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  width: 27px;
+  height: 44px;
+  margin-top: -22px;
+  z-index: 10;
+  cursor: pointer;
+  background-size: 27px 44px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+  left: 10px;
+  right: auto;
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  right: 10px;
+  left: auto;
+}
+@media screen and (max-width: 600px) {
+  .container.project-details table{font-size: 11px;line-height: 16px;}
+}

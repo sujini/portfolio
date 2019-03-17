@@ -29,7 +29,7 @@ mark{background-color:#ff9;font-style:italic;font-weight:bold;color:#282828}
 del{text-decoration:line-through}
 abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
 hr{border-collapse:collapse}
-body,.wrap{background: url(https://sujini.github.io/english/img/bg_pattern.jpg) repeat}
+body,.wrap{background:#f3eaea}
 
 .l0{left: 0;}
 .l10{left: 10%;}

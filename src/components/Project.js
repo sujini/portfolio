@@ -6,19 +6,19 @@ import {firestoreConnect} from 'react-redux-firebase';
 import ProjectSummary from './projects/ProjectSummary';
 class Project extends Component {
    
-    render() {
-        console.log(this.props);
+    render() { 
         const {projects}=this.props;
         return(
-            <div className="project-list section">
+            <div className="container project">
+                <div className="inner">
                 {projects && projects.map(project=>{
                     return (
                         <Link to={'/project/'+project.id}  key={project.id}>
-                        dd
+                            <ProjectSummary project={project}/>
                         </Link>
                     )
                 })}
-                
+                </div>
                
             </div>
         )
@@ -26,15 +26,13 @@ class Project extends Component {
 }
 
 const mapStateToProps = (state) =>{
-    console.log(state);
     return{
-        projects:state.firestore.ordered.projects,
-        auth:state.firebase.auth
+        projects:state.firestore.ordered.projects
     }
 }
 export default compose(
     connect(mapStateToProps),
     firestoreConnect([
-        {collection:'projects',limit:3, orderBy:['createdAt','desc']}
+        {collection:'projects',orderBy:['period','desc']}
     ])
 )(Project);
