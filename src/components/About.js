@@ -15,7 +15,7 @@ class About extends Component {
 
         $centerCi = $('#About .center_ci');
         ciPos = 166+75;
-        ciFixTop = $('#About').innerHeight();
+        ciFixTop = $('#About .about_list').innerHeight();
 
         window.addEventListener('scroll', this.handleScroll);
 
@@ -80,6 +80,16 @@ class About extends Component {
     render() {
         return (
             <div className="container about" id="About">
+                <div className="inner">
+                    <p>저는 프론트엔드개발자 <em>박수진</em>입니다<br/>
+                    가천대학교 소프트웨어학부 -> 컴퓨터미디어과를 전공하여 컴퓨터 프로그래밍에 입문하여<br/>
+                    안드로이드 영어공부앱으로 졸업작품으로 졸업하였으니 첫회사에서 웹개발을 하게되어 프론트엔드개발자가되었습니다.<br/>
+                        신기술과 트렌드에 관심이 많고 끊임없이 발전하려고 노력하는것을 좋아합니다.
+                    </p>
+                    <p>
+                        <em>javascript, Reactjs, Redux, threejs, html, css, webpack, nodejs, firbase, mysql, php</em>
+                    </p>
+                </div>
                 <div className="half_line"></div>
                 
                 <div className="about_list">
@@ -188,19 +198,21 @@ class About extends Component {
                             </div>
                         </li>
                     </ul>
+                    <div className="center_ci">
+                        <div className="ci_xiilab mot2 active">
+                            X<em>IIl</em>ab
+                        </div>
+                        <div className="ci_does mot2">
+                            does
+                        </div>
+                        <div className="ci_diware mot2">
+                            <em>DI</em>ware
+                        </div>
+                    </div>
                 </div>
-                <div className="center_ci">
-                    <div className="ci_xiilab mot2 active">
-                        X<em>IIl</em>ab
-                    </div>
-                    <div className="ci_does mot2">
-                        does
-                    </div>
-                    <div className="ci_diware mot2">
-                        <em>DI</em>ware
-                    </div>
-                </div>
+                
             
+                <p><img width="500px" src="/img/about.png" alt=""/></p>
             </div>
         );
     }

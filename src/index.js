@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux'
-import {firebase,storage} from './config/fbConfig'
+import {firebase} from './config/fbConfig'
 import { createStore, compose } from 'redux'
 import { ReactReduxFirebaseProvider } from 'react-redux-firebase'
 import { createFirestoreInstance } from 'redux-firestore' // <- needed if using firestore
@@ -32,7 +32,6 @@ const rrfProps = {
   createFirestoreInstance // <- needed if using firestore
 }
 
-console.log(store.firebaseAuthIsReady)
 
 ReactDOM.render(<Provider store={store}><ReactReduxFirebaseProvider {...rrfProps}><App /></ReactReduxFirebaseProvider></Provider>, document.getElementById('root'));
 
