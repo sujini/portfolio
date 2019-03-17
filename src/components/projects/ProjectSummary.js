@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import {NavLink,withRouter} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 
 import {storage} from '../../config/fbConfig';
 class ProjectSummary extends Component {
     state={
-        imgUrl:''
+        imgUrl:'',
+        isHover:false
     }
    
     componentDidMount(){
@@ -25,15 +26,31 @@ class ProjectSummary extends Component {
        
        
     }
-  
+    hoverOn(e){
+        e.preventDefault();
+        this.setState({
+            isHover:true
+        })
+
+    }
+    hoverOff(e){
+        e.preventDefault();
+        this.setState({
+            isHover:false
+        })
+
+    }
     render() {
         const {project} = this.props;
         return (      
-            <div className="card z-depth-0 project-summary">
+            <div className={`card project-summary ${this.state.isHover ? "hover" : ""}`} 
+            onMouseEnter={this.hoverOn.bind(this)} 
+            onMouseLeave={this.hoverOff.bind(this)}>
                 <div className="card-content">
                     <span className="card-title">{project.title}</span>
                     <p>{project.role[0]}</p>
-                    <p className="grey-text">{project.period}</p>
+                    <p className="period">{project.period}</p>
+                    <span className="more-view"><em>더보기</em></span>
                 </div>
                 <div className="card-img">
                     {project.imgs?<img src={this.state.imgUrl} alt=""/>:null

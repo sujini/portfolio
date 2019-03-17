@@ -10,6 +10,8 @@ import { ReactReduxFirebaseProvider } from 'react-redux-firebase'
 import { createFirestoreInstance } from 'redux-firestore' // <- needed if using firestore
 
 import rootReducer from './store/reducers/rootReducer';
+import 'react-app-polyfill/ie9'; // For IE 9-11 support
+import 'react-app-polyfill/ie11'; // For IE 11 support
 // react-redux-firebase config
 const rrfConfig = {
   userProfile: 'users',

@@ -118,12 +118,24 @@ body.page-template-tpl-workshop {background-color: #000;}
 .container.about .center_ci>div.ci_does{color:#22CACE;}
 .container.about .center_ci>div.ci_diware em{color:#007dc3}
 
-.container.project .card{position: relative; box-shadow: 0px 0px 15px #999;margin:20px 4%;background: #fff;overflow: hidden;}
+.container.project .card{position: relative;font-size: 0;letter-spacing: 0;word-spacing: 0; box-shadow: 0px 0px 15px #999;margin:20px 4%;background: #fff;overflow: hidden;}
 .container.project .card:before{content: '';position: absolute;right:0;top:0;width: 35%;bottom:0;background: #222;}
-.container.project .card .card-content{float:left;height: 100%; width: 65%; padding: 20px;font-size: 15px;line-height: 20px;background: #fff;box-sizing: border-box}
+.container.project .card .card-content{position: relative; display: inline-block;height: 100%; width: 65%; padding: 20px;font-size: 15px;line-height: 20px;background: #fff;box-sizing: border-box}
 .container.project .card .card-content .card-title{font-weight: 500;font-size:18px;padding: 0 0 10px;display: block;}
-.container.project .card .card-img{position: relative;float:right;width: 35%;text-align: center;background: #222;}
+.container.project .card .card-img{position: relative;display: inline-block;width: 35%;text-align: center;background: #222;}
 .container.project .card .card-img img{width: 80%;padding: 30px 0}
+.container.project .card .card-content .period{padding-bottom:50px}
+.container.project .card .card-content .more-view{position: absolute;bottom:20px;right:20px;padding:0 15px}
+
+.container.project .card .card-content .more-view em{font-weight: 700;font-size: 15px;line-height: 30px;height: 30px}
+.container.project .card.hover .card-content .more-view:before{transition:all 0.2s ease-out;width: 100%;}
+.container.project .card.hover .card-content .more-view:after{transition:all 0.2s ease-out;height: 100%;}
+.container.project .card.hover .card-content .more-view em:before{transition:all 0.2s ease-out;width: 100%;}
+.container.project .card.hover .card-content .more-view em:after{transition:all 0.2s ease-out;height: 100%;}
+.container.project .card .card-content .more-view:before{transition:all 0.2s ease-out; content: '';position: absolute;top:0;left:0;width: 0%;height: 3px;background: #333}
+.container.project .card .card-content .more-view:after{transition:all 0.2s ease-out;content: '';position: absolute;top:0;right:0;width: 3px;height: 0%;background: #f5cece}
+.container.project .card .card-content .more-view em:before{transition:all 0.2s ease-out;content: '';position: absolute;bottom:0;right:0;width: 0%;height: 3px;background: #f5cece}
+.container.project .card .card-content .more-view em:after{transition:all 0.2s ease-out;content: '';position: absolute;bottom:0;left:0;width: 3px;height: 0%;background: #333}
 .container.project-details .inner{padding: 0 0 100px}
 .container.project-details table{border-collapse: collapse;font-size:15px;line-height: 20px;width: 100%;}
 
