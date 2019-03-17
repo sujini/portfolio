@@ -212,7 +212,7 @@ class About extends Component {
                 </div>
                 
             
-                <p><img width="500px" src="/img/about.png" alt=""/></p>
+                <p><img width="500px" src="/img/about.jpg" alt=""/></p>
             </div>
         );
     }
