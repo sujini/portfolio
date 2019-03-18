@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {TweenMax} from 'gsap';
+import {TweenMax,Power2} from 'gsap';
 import {Link,withRouter} from 'react-router-dom';
 class Home extends Component {
     curIdx=0;
@@ -8,8 +8,8 @@ class Home extends Component {
 
     handleMouseMove(e) {
 
-        var x = ( e.clientX /document.body.clientWidth  ) * 40 - 20;
-        var y = ( e.clientY / document.body.clientHeight ) * 40 - 20;
+        var x = (( e.clientX /document.body.clientWidth  ) * 40 - 20).toFixed(0);
+        var y = (( e.clientY / document.body.clientHeight ) * 40 - 20).toFixed(0);
 
         let h2= document.querySelectorAll("li.active h2 em");
         h2.forEach(function(item,i) {
@@ -18,14 +18,13 @@ class Home extends Component {
 
     }
  
-    async handleClick(e){
+    handleClick(e){
         e.preventDefault();
         clearInterval(this.timer);
         let path = e.target.parentNode.dataset.to; 
-        console.log(e.target.parentNode);
 
         this.pageOutAni(1000,"promise_V_").then(v=>{
-            console.log(v,this.props.history)
+          
             this.props.history.push(path);
           
         });
@@ -50,7 +49,7 @@ class Home extends Component {
 
         if(this.beforeIndx!==undefined){
             let beforeLi = Li[this.beforeIndx],box = beforeLi.querySelectorAll("span");
-            TweenMax.fromTo(box, 0.8, {x:"0"},{x:"100%",onComplete:()=>{
+            TweenMax.fromTo(box, 0.8, {x:"0"},{x:"100%",ease:Power2.easeIn,onComplete:()=>{
                 this.listInMotion(Li);
     
             }});
@@ -71,7 +70,7 @@ class Home extends Component {
         });
        
         curLi.classList.add('active');
-        TweenMax.fromTo(box, 1, {x:"-100%"},{x:"0%",onComplete:()=>{
+        TweenMax.fromTo(box, 1, {x:"-100%"},{x:"0%",ease:Power2.easeOut,onComplete:()=>{
             this.beforeIndx=this.curIdx;
             this.curIdx=this.curIdx>=2?0:this.curIdx+1;
 

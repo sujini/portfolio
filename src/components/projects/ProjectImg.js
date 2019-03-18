@@ -10,7 +10,7 @@ class ProjectImg extends Component {
     componentDidMount(){
         let storageRef = storage.ref(this.props.imgPath);
         storageRef.getDownloadURL().then(url=> {
-            console.log(url)
+            
             this.setState({
                 imgUrl:url
             })

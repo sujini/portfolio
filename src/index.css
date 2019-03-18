@@ -1,5 +1,37 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: url(/fonts/notokr/notokr-regular.eot);
+    src: url(/fonts/notokr/notokr-regular.eot?#iefix) format('embedded-opentype'),
+    url(/fonts/notokr/notokr-regular.woff2) format('woff2'),
+    url(/fonts/notokr/notokr-regular.woff) format('woff'),
+    url(/fonts/notokr/notokr-regular.ttf) format('truetype'),
+    url(/fonts/notokr/notokr-regular.svg#notokr-regular) format('svg');
+}
 
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/notokr/notokr-medium.eot);
+    src: url(/fonts/notokr/notokr-medium.eot?#iefix) format('embedded-opentype'),
+    url(/fonts/notokr/notokr-medium.woff2) format('woff2'),
+    url(/fonts/notokr/notokr-medium.woff) format('woff'),
+    url(/fonts/notokr/notokr-medium.ttf) format('truetype'),
+    url(/fonts/notokr/notokr-medium.svg#notokr-medium) format('svg');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 900;
+    src: url(/fonts/notokr/notokr-bold.eot);
+    src: url(/fonts/notokr/notokr-bold.eot?#iefix) format('embedded-opentype'),
+    url(/fonts/notokr/notokr-bold.woff2) format('woff2'),
+    url(/fonts/notokr/notokr-bold.woff) format('woff'),
+    url(/fonts/notokr/notokr-bold.ttf) format('truetype'),
+    url(/fonts/notokr/notokr-bold.svg#notokr-bold) format('svg');
+}
 /* HTML5 RESET CSS Document */
 
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;background:transparent;font-size:100%;vertical-align:middle;outline:0;-webkit-text-size-adjust:none}

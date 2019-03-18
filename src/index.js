@@ -12,6 +12,19 @@ import { createFirestoreInstance } from 'redux-firestore' // <- needed if using 
 import rootReducer from './store/reducers/rootReducer';
 import 'react-app-polyfill/ie9'; // For IE 9-11 support
 import 'react-app-polyfill/ie11'; // For IE 11 support
+
+     
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+      thisArg = thisArg || window;
+      for (var i = 0; i < this.length; i++) {
+          callback.call(thisArg, this[i], i, this);
+      }
+  };
+}
+
+
+
 // react-redux-firebase config
 const rrfConfig = {
   userProfile: 'users',
