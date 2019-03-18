@@ -103,9 +103,11 @@ class Home extends Component {
                             <Link to="/about" onClick={this.handleClick.bind(this)}><h2 data-to="/about"><em>A</em><em>b</em><em>o</em><em>u</em><em>t</em></h2></Link>
                         </li> 
                         <li>
-                            <div className="l10 t0 w30 h100"><span style={{background:'url(/img/project_img1.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
-                            <div className="l40 t0 w20 h20"><span style={{background:'url(/img/project_img2.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
-                            <div className="l70 t80 w20 h20"><span style={{background:'url(/img/project_img3.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
+                            <div className="l0 t80 w20 h20"><span style={{background:'url(/img/project_img4.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
+                            
+                            <div className="l20 t0 w30 h100"><span style={{background:'url(/img/project_img1.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
+                            <div className="l60 t20 w20 h20"><span style={{background:'url(/img/project_img2.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
+                            <div className="l80 t40 w20 h20"><span style={{background:'url(/img/project_img3.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
                             <Link to="/project" onClick={this.handleClick.bind(this)}><h2 data-to="/project"><em>P</em><em>r</em><em>o</em><em>j</em><em>e</em><em>c</em><em>t</em></h2></Link>
                            
                         </li> 

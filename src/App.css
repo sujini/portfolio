@@ -111,7 +111,7 @@ body.page-template-tpl-workshop {background-color: #000;}
 .container.about .center_ci .ci{display:block;position: absolute;opacity: 0;}
 .container.about .center_ci .ci.on{opacity: 1;}
 .container.about .center_ci.on{position: fixed;left:50%;top:241px;}
-.container.about .center_ci.over{position: absolute;left:50%;top:100%;}
+.container.about .center_ci.over{position: absolute;left:50%;top:100%;margin-top:-20px;}
 .container.about .center_ci .ci_mask{overflow: hidden;width:88px;}
 .container.about .center_ci>div{position: absolute;top:0;left:0;bottom:0;right:0;line-height: 88px;font-size: 20px;font-weight: bold;opacity: 0;}
 .container.about .center_ci>div.active{opacity: 1;}

@@ -87,7 +87,7 @@ class About extends Component {
                         신기술과 트렌드에 관심이 많고 끊임없이 발전하려고 노력하는것을 좋아합니다.
                     </p>
                     <p>
-                        <em>javascript, Reactjs, Redux, threejs, html, css, webpack, nodejs, firbase, mysql, php</em>
+                        <em>javascript, Reactjs, Redux, threejs, html, css, webpack, nodejs, firebase, mysql, php</em>
                     </p>
                 </div>
                 <div className="half_line"></div>
@@ -158,7 +158,7 @@ class About extends Component {
                         <li className="right_box">
                             <div className="year_box">
                                 <span className="year">2017.08</span>
-                                <div className="year_text">한화 토탈시이트 프론트엔드 개발</div>
+                                <div className="year_text">한화 토탈사이트 프론트엔드 개발</div>
                             </div>
                         </li>
                         <li className="right_box">
