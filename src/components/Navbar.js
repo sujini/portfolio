@@ -43,7 +43,7 @@ class Navbar extends Component {
                             <li><NavLink exact activeClassName="active" to="/">home</NavLink></li>
                             <li><NavLink activeClassName="active"  to="/about">about</NavLink></li>
                             <li><NavLink activeClassName="active"  to="/project">project</NavLink></li>
-                            <li><a href="https://github.com/sujini" target="_blank">github</a></li>
+                            <li><a href="https://github.com/sujini" target="_blank" rel="noopener noreferrer">github</a></li>
                         </ul>
                     </div>
                     <a href="/" onClick={this.handleClick}className="btn-menu">
