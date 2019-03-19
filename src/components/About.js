@@ -1,8 +1,9 @@
 import React, { Component  } from 'react';
 import $ from 'jquery';
 import Animation from '../animations/Animation';
-let $centerCi,ciPos=0,ciFixTop=0;
+let $centerCi;
 class About extends Component {
+    topH=0;ciFixTop=0;
     constructor(props) {
         super(props);
 
@@ -13,19 +14,20 @@ class About extends Component {
         console.log('main','componentDidMount');
         Animation.hideLoad();
 
+        this.topH = $('.container.about .inner').innerHeight();      
+        this.ciFixTop = $('#About .about_list').offset().top+$('#About .about_list').innerHeight();
         $centerCi = $('#About .center_ci');
-        ciPos = 166+75;
-        ciFixTop = $('#About .about_list').innerHeight();
+        $centerCi.css('top',this.topH);
 
         window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
 
     };
-    componentWillMount() {
 
-    };
     componentWillUnmount() {
         console.log('main','componentWillUnmount');
         window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleResize);
     };
     scrollPer(_min,_max,_st,_callback){
         let per = (_st-_min)/(_max-_min);
@@ -46,25 +48,34 @@ class About extends Component {
 
 
     }
+    handleResize(){
+        this.topH = $('.container.about .inner').innerHeight()
+        $centerCi.css('top',this.topH);    
+        this.ciFixTop = $('#About .about_list').offset().top+$('#About .about_list').innerHeight();
+
+    }
 
     handleScroll(event) {
 
         var st = $(window).scrollTop();
 
       
-        if(st >= ciFixTop){
-            if(!$centerCi.hasClass('over')){
-                $centerCi.addClass('over');
-            }
+        if(st >= this.ciFixTop-this.topH){
+            $centerCi.addClass('over').css("top","100%");
             
         }else{
-            if($centerCi.hasClass('over')) {
-                $centerCi.removeClass('over');
+            if(st <=1){
+                $centerCi.addClass('over').css("top",0);
+            }else{
+                $centerCi.removeClass('over').css("top",this.topH);
             }
+           
+            
+            
         }
-        var min0 = $('#About .company_start').eq(0).offset().top-ciPos-44;
-        var min1 = $('#About .company_start').eq(1).offset().top-ciPos-44;
-        var min2 = $('#About .company_start').eq(2).offset().top-ciPos-44;
+        var min0 = $('#About .company_start').eq(0).offset().top-this.topH;
+        var min1 = $('#About .company_start').eq(1).offset().top-this.topH;
+        var min2 = $('#About .company_start').eq(2).offset().top-this.topH;
         if(st >= min0 && st < min1){
             $('#About .center_ci>div').removeClass('active');
             $('#About .center_ci>div').eq(0).addClass('active');
@@ -87,7 +98,7 @@ class About extends Component {
                         신기술과 트렌드에 관심이 많고 끊임없이 발전하려고 노력하는것을 좋아합니다.
                     </p>
                     <p>
-                        <em>javascript, Reactjs, Redux, threejs, html, css, webpack, nodejs, firebase, mysql, php</em>
+                        <em>javascript, Reactjs, Redux, threejs, html, css, webpack, nodejs, firebase, mysql</em>
                     </p>
                 </div>
                 <div className="half_line"></div>
@@ -212,7 +223,7 @@ class About extends Component {
                 </div>
                 
             
-                <p><img width="500px" src="/img/about.jpg" alt=""/></p>
+                <p className="bottom_img"><img src="/img/about.jpg" alt=""/></p>
             </div>
         );
     }

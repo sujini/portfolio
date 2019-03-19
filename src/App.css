@@ -70,8 +70,13 @@ body.page-template-tpl-workshop {background-color: #000;}
 .container.home .slide ul li{position: absolute;background: #f3eaea; top:0;left:0;width: 100%;height: 100%;opacity: 0;visibility: hidden;}
 .container.home .slide ul li.active{opacity: 1;visibility:visible;}
 .container.home .slide ul li a{position: absolute;top:50%;left:50%;transform: translate(-50%,-50%);}
-.container.home .slide ul li a h2{text-shadow: 1px 1px 7px #aaa;}
-.container.home .slide ul li a h2 em{font-size: 80px;font-weight: 900;color:#333;letter-spacing: 1px; display:inline-block;opacity: 0}
+.container.home .slide ul li a h2{position: relative; transition: all 0.3s ease-out;text-shadow: 1px 1px 7px #aaa;}
+.container.home .slide ul li a h2 em{transition: all 0.3s ease-out;font-size: 80px;font-weight: 900;line-height: 90px;color:#333;letter-spacing: 1px; display:inline-block;opacity: 0}
+
+.container.home .slide ul li a:hover h2:before{width: 100%;}
+.container.home .slide ul li a:hover h2:after{opacity: 1;}
+.container.home .slide ul li a h2:before{content: ''; position: absolute;bottom:-2px; left: 0;height: 2px;background: #fb9898;width: 0;transition:all 0.2s ease-out;}
+.container.home .slide ul li a h2:after{content: 'go'; position: absolute;bottom:-17px; right: 0;opacity: 0;font-size: 12x;font-weight:700;line-height: 18px;height: 17px; padding: 0 5px; color:#fb9898;background: #333;transition:all 0.3s ease-out;}
 .container.home .slide ul li >div{position: absolute;overflow: hidden;}
 .container.home .slide ul li >div >span{background: #000;text-align: center;  transform: translate(-100%,0); display: block;
   width: 120%;height: 120%;margin: -10% 0 0 -10%}
@@ -80,12 +85,14 @@ body.page-template-tpl-workshop {background-color: #000;}
 .container.home .slide ul li >div >span img{width: auto;height: auto;}
 .container.about p{font-size: 17px;text-align: center;line-height: 22px;padding: 0 0 10px}
 .container.about p em{font-weight: 700}
-.container.about{display:block;position: relative;clear: both;padding: 0 0 50px}
+.container.about p img{max-width: 500px;width: 100%;}
+.container.about{display:block;position: relative;clear: both;}
 .container.about .half_line{position: absolute;top:65px;left:50%;margin-left:-1px;width:1px;height:2250px;background-color:#e2e2e2;opacity: 0; }
 .container.about .half_line:before{content:'';display:block;position:absolute;top:0;left:-3px;border:1px solid #c4c4c4;border-radius: 100%;background-color: #c4c4c4;width:5px;height:5px;}
 .container.about .half_line:after{content:'';display:block;position:absolute;bottom:-2.5px;left:-3px;border:1px solid #d9d9d9;border-radius: 50%;background-color: #d9d9d9;width:5px;height:5px;}
 .container.about .half_line.hide{opacity: 0 !important;}
-.container.about .about_list{position: relative; margin: 75px auto 100px;}
+.container.about .inner{padding: 50px 0}
+.container.about .about_list{position: relative; margin: 0 auto 100px;}
 .container.about .about_list:before {content:'';width:1px;height:100%;background:#333;position:absolute;left:50%;top:0px;}
 .container.about .about_list ul {position: relative;padding-top: 35px; }
 .container.about .about_list ul:before {content:'';width:5px;height:5px;background:#333;position:absolute;left:50%;top:0;margin-left:-2px;border-radius: 5px}
@@ -103,11 +110,11 @@ body.page-template-tpl-workshop {background-color: #000;}
 .container.about .about_list ul li .year_box .year {font-size:18px;color:#666;line-height:21px;margin-bottom:5px;}
 .container.about .about_list ul li .year_box .year_text {font-size:16px;line-height:24px;letter-spacing: -0.5px;}
 
-.container.about .center_ci{position: fixed;left:50%;top:241px;margin: 4px 0 0 -44px;width: 88px;height: 88px;border-radius: 100%;text-align: center;opacity: 1;background: #000;color:#fff;z-index: 2;}
+.container.about .center_ci{position: fixed;left:50%;top:258px;margin: -44px 0 0 -44px;width: 88px;height: 88px;border-radius: 100%;text-align: center;opacity: 1;background: #000;color:#fff;z-index: 2;}
 .container.about .center_ci .ci{display:block;position: absolute;opacity: 0;}
 .container.about .center_ci .ci.on{opacity: 1;}
 .container.about .center_ci.on{position: fixed;left:50%;top:241px;}
-.container.about .center_ci.over{position: absolute;left:50%;top:100%;margin-top:-20px;}
+.container.about .center_ci.over{position: absolute;left:50%;top:100%;}
 .container.about .center_ci .ci_mask{overflow: hidden;width:88px;}
 .container.about .center_ci>div{position: absolute;top:0;left:0;bottom:0;right:0;line-height: 88px;font-size: 20px;font-weight: bold;opacity: 0;}
 .container.about .center_ci>div.active{opacity: 1;}
@@ -210,6 +217,24 @@ body.page-template-tpl-workshop {background-color: #000;}
   left: auto;
 }
 @media screen and (max-width: 600px) {
-  .container.home .slide ul li a h2 em{font-size: 45px;}
+  nav .btn-menu{right: 0;background: rgba(255, 221, 221, 0.5);}
+  .container.home .slide ul li a h2 em{font-size: 40px;letter-spacing: 0;}
+  .container.about .inner{padding: 50px 5%}
+  .container.about .inner p{font-size: 13px;line-height: 16px}
+
+  .container.about .about_list ul li .year_box .year{font-size: 14px}
+  .container.about .about_list ul li .year_box .year_text{font-size: 13px;line-height: 18px;}
+  .container.about .about_list ul li.left_box .year_box {padding: 10px 50px 10px 0;}
+  .container.about .about_list ul li.right_box .year_box {padding: 10px 0 10px 50px;}
   .container.project-details table{font-size: 11px;line-height: 16px;}
+  .container.project .card .card-content{font-size: 13px;line-height: 18px; padding: 15px;}
+  .container.project .card .card-content .card-title{font-size: 15px} 
+  .container.project .card .card-content .more-view{padding: 0 10px}
+  .container.project .card .card-content .more-view em{font-size: 13px;line-height: 28px;height: 27px;}
+  .container.project .card .card-content .more-view:before{width: 100%;}
+  .container.project .card .card-content .more-view:after{height: 100%;}
+  .container.project .card .card-content .more-view em:before{width: 100%;}
+  .container.project .card .card-content .more-view em:after{height: 100%;}
+
+  
 }
