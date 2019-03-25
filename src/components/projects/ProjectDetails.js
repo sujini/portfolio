@@ -52,7 +52,7 @@ const ProjectDetails = (props) =>{
                         <td colSpan="3">{project.title}</td>
                     </tr>
                     <tr>
-                        <th>프로젝트명</th>
+                        <th>역할</th>
                         <td>{project.period}</td>
                         <th>인원(개발인원)</th>
                         <td>{project.member}명</td>

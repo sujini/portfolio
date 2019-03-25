@@ -70,7 +70,7 @@ body.page-template-tpl-workshop {background-color: #000;}
 .container.home .slide ul li{position: absolute;background: #f3eaea; top:0;left:0;width: 100%;height: 100%;opacity: 0;visibility: hidden;}
 .container.home .slide ul li.active{opacity: 1;visibility:visible;}
 .container.home .slide ul li a{position: absolute;top:50%;left:50%;transform: translate(-50%,-50%);}
-.container.home .slide ul li a h2{position: relative; transition: all 0.3s ease-out;text-shadow: 1px 1px 7px #aaa;}
+.container.home .slide ul li a h2{position: relative;text-shadow: 1px 1px 7px #aaa;}
 .container.home .slide ul li a h2 em{transition: all 0.3s ease-out;font-size: 80px;font-weight: 900;line-height: 90px;color:#333;letter-spacing: 1px; display:inline-block;opacity: 0}
 
 .container.home .slide ul li a:hover h2:before{width: 100%;}
@@ -140,7 +140,7 @@ body.page-template-tpl-workshop {background-color: #000;}
 .container.project .card .card-content .more-view:after{transition:all 0.2s ease-out;content: '';position: absolute;top:0;right:0;width: 3px;height: 0%;background: #f5cece}
 .container.project .card .card-content .more-view em:before{transition:all 0.2s ease-out;content: '';position: absolute;bottom:0;right:0;width: 0%;height: 3px;background: #f5cece}
 .container.project .card .card-content .more-view em:after{transition:all 0.2s ease-out;content: '';position: absolute;bottom:0;left:0;width: 3px;height: 0%;background: #333}
-.container.project-details .inner{padding: 0 0 100px}
+.container.project-details .inner{padding: 50px 0 100px}
 .container.project-details table{border-collapse: collapse;font-size:15px;line-height: 20px;width: 100%;}
 
 .container.project-details table tr:first-child td{border-top:0}
@@ -165,7 +165,7 @@ body.page-template-tpl-workshop {background-color: #000;}
   display: inline-block;
   border-radius: 100%;
   background: #000;
-  opacity: .2;
+  opacity: .7;
 }
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 4px;
@@ -176,7 +176,7 @@ body.page-template-tpl-workshop {background-color: #000;}
 }
 .swiper-pagination-bullet-active {
   opacity: 1;
-  background: #f5cece;
+  background: #fd8585;
 }
 
 
@@ -199,23 +199,26 @@ body.page-template-tpl-workshop {background-color: #000;}
 .swiper-button-next, .swiper-button-prev {
   position: absolute;
   top: 50%;
-  width: 27px;
+  width: 44px;
   height: 44px;
   margin-top: -22px;
   z-index: 10;
   cursor: pointer;
-  background-size: 27px 44px;
+  background-size: 44px 44px;
   background-position: center;
   background-repeat: no-repeat;
 }
 .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
   left: 10px;
   right: auto;
+  background-image: url(/img/next.png); 
 }
 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
   right: 10px;
   left: auto;
+  background-image: url(/img/prev.png);
 }
+.swiper-button-disabled{opacity: 0.2;}
 @media screen and (max-width: 600px) {
   nav .btn-menu{right: 0;background: rgba(255, 221, 221, 0.5);}
   .container.home .slide ul li a h2 em{font-size: 40px;letter-spacing: 0;}
@@ -235,6 +238,10 @@ body.page-template-tpl-workshop {background-color: #000;}
   .container.project .card .card-content .more-view:after{height: 100%;}
   .container.project .card .card-content .more-view em:before{width: 100%;}
   .container.project .card .card-content .more-view em:after{height: 100%;}
+
+  .swiper-button-next, .swiper-button-prev { width: 36px;height: 36px; background-size: 36px 36px}
+  .swiper-button-prev, .swiper-container-rtl .swiper-button-next {left: 1px;}
+  .swiper-button-next, .swiper-container-rtl .swiper-button-prev {right: 1px;}
 
   
 }
