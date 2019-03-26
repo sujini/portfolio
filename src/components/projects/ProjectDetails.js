@@ -49,7 +49,7 @@ const ProjectDetails = (props) =>{
                 <tbody>
                     <tr>
                         <th>프로젝트명</th>
-                        <td colSpan="3">{project.title}</td>
+                        <td colSpan="3">{project.title} {project.subtitle&&project.subtitle}</td>
                     </tr>
                     <tr>
                         <th>역할</th>

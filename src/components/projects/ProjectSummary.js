@@ -42,20 +42,21 @@ class ProjectSummary extends Component {
     }
     render() {
         const {project} = this.props;
+        const project_img =project.imgs?<img src={this.state.imgUrl} alt=""/>:null;
         return (      
             <div className={`card project-summary ${this.state.isHover ? "hover" : ""}`} 
             onMouseEnter={this.hoverOn.bind(this)} 
             onMouseLeave={this.hoverOff.bind(this)}>
+                
+                <div className="card-img" style={{backgroundImage:`url(${this.state.imgUrl})`}}>
+                    {project_img} 
+                            
+                </div>
                 <div className="card-content">
                     <span className="card-title">{project.title}</span>
                     <p>{project.role[0]}</p>
                     <p className="period">{project.period}</p>
                     <span className="more-view"><em>더보기</em></span>
-                </div>
-                <div className="card-img">
-                    {project.imgs?<img src={this.state.imgUrl} alt=""/>:null
-                    } 
-                            
                 </div>
             </div>
         
