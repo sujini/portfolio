@@ -225,7 +225,7 @@ body.page-template-tpl-workshop {background-color: #000;}
 .swiper-button-disabled{opacity: 0.2;}
 @media screen and (max-width: 800px) {
   .container.project .inner{max-width: 800px;}
-  .container.project .card{width: 48%;height: 300px; margin: 10px 1%;}
+  .container.project .card{width: 48%;height: 400px; margin: 10px 1%;}
 }
 @media screen and (max-width: 600px) {
   nav .btn-menu{right: 0;background: rgba(255, 221, 221, 0.5);}
@@ -238,7 +238,7 @@ body.page-template-tpl-workshop {background-color: #000;}
   .container.about .about_list ul li.left_box .year_box {padding: 10px 50px 10px 0;}
   .container.about .about_list ul li.right_box .year_box {padding: 10px 0 10px 50px;}
   .container.project-details table{font-size: 11px;line-height: 16px;}
-  .container.project .card{width: 48%;height: 300px; margin: 10px 1%;}
+  .container.project .card{height: 300px;}
   .container.project .card .card-content{font-size: 13px;line-height: 18px; padding: 10px;}
   .container.project .card .card-content .card-title{font-size: 15px} 
   .container.project .card .card-content .more-view{padding: 0 8px;bottom:10px;right:10px;}
