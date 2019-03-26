@@ -43,6 +43,7 @@ class ProjectSummary extends Component {
     render() {
         const {project} = this.props;
         const project_img =project.imgs?<img src={this.state.imgUrl} alt=""/>:null;
+        const skills = project.role?project.role[0].split(','):null;
         return (      
             <div className={`card project-summary ${this.state.isHover ? "hover" : ""}`} 
             onMouseEnter={this.hoverOn.bind(this)} 
@@ -54,8 +55,14 @@ class ProjectSummary extends Component {
                 </div>
                 <div className="card-content">
                     <span className="card-title">{project.title}</span>
-                    <p>{project.role[0]}</p>
-                    <p className="period">{project.period}</p>
+                    <p>
+                        {skills.map((skill,i)=>{
+                            return (
+                                <span className="tag" key={i}>{skill}</span>
+                            )
+                        })}
+                    </p>
+                    
                     <span className="more-view"><em>더보기</em></span>
                 </div>
             </div>

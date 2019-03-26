@@ -128,14 +128,14 @@ body.page-template-tpl-workshop {background-color: #000;}
     vertical-align: top;
     box-shadow: 0px 0px 15px #999;margin:20px 1%;background: #fff;overflow: hidden;}
 .container.project .card:before{content: '';position: absolute;right:0;top:0;width: 35%;bottom:0;background: #222;}
-.container.project .card .card-content{position: relative; display: block;height: 40%; padding: 20px;font-size: 15px;line-height: 20px;background: #fff;box-sizing: border-box}
+.container.project .card .card-content{position: relative; display: block;height: 40%; padding: 20px;font-size: 15px;line-height: 20px;background: #fff;box-sizing: border-box;text-align: center}
 .container.project .card .card-content .card-title{font-weight: 700;font-size:18px;padding: 0 0 10px;display: block;}
 .container.project .card .card-img{position: relative;display: block;height: 60%;text-align: center;background-color: #222;background-repeat: no-repeat;background-position: center;background-size: cover}
-.container.project .card .card-img img{width: 10px;opacity: 0;}
+.container.project .card .card-img img{width: 10px;opacity: 0;visibility: hidden}
 .container.project .card .card-content .period{padding-bottom:50px}
-.container.project .card .card-content .more-view{position: absolute;bottom:20px;right:20px;padding:0 15px}
+.container.project .card .card-content .more-view{position: absolute;bottom:20px;right:20px;padding:0 15px;height: 30px}
 
-.container.project .card .card-content .more-view em{font-weight: 700;font-size: 15px;line-height: 30px;height: 30px}
+.container.project .card .card-content .more-view em{font-weight: 700;font-size: 15px;line-height: 33px;}
 .container.project .card.hover .card-content .more-view:before{transition:all 0.2s ease-out;width: 100%;}
 .container.project .card.hover .card-content .more-view:after{transition:all 0.2s ease-out;height: 100%;}
 .container.project .card.hover .card-content .more-view em:before{transition:all 0.2s ease-out;width: 100%;}
@@ -144,6 +144,7 @@ body.page-template-tpl-workshop {background-color: #000;}
 .container.project .card .card-content .more-view:after{transition:all 0.2s ease-out;content: '';position: absolute;top:0;right:0;width: 3px;height: 0%;background: #f5cece}
 .container.project .card .card-content .more-view em:before{transition:all 0.2s ease-out;content: '';position: absolute;bottom:0;right:0;width: 0%;height: 3px;background: #f5cece}
 .container.project .card .card-content .more-view em:after{transition:all 0.2s ease-out;content: '';position: absolute;bottom:0;left:0;width: 3px;height: 0%;background: #333}
+.container.project .card .card-content .tag{background: #ddd;border-radius: 10px;padding: 0 5px;margin: 1px 1px;}
 .container.project-details .inner{padding: 50px 0 100px}
 .container.project-details table{border-collapse: collapse;font-size:15px;line-height: 20px;width: 100%;}
 
@@ -240,9 +241,9 @@ body.page-template-tpl-workshop {background-color: #000;}
   .container.project-details table{font-size: 11px;line-height: 16px;}
   .container.project .card{height: 300px;}
   .container.project .card .card-content{font-size: 13px;line-height: 18px; padding: 10px;}
-  .container.project .card .card-content .card-title{font-size: 15px} 
-  .container.project .card .card-content .more-view{padding: 0 8px;bottom:10px;right:10px;}
-  .container.project .card .card-content .more-view em{font-size: 11px;line-height: 24px;height: 23px;}
+  .container.project .card .card-content .card-title{font-size: 15px;    padding: 0 0 8px;} 
+  .container.project .card .card-content .more-view{padding: 0 8px;bottom:10px;right:10px;height: 22px;}
+  .container.project .card .card-content .more-view em{font-size: 11px;line-height: 24px;}
   .container.project .card .card-content .more-view:before{width: 100%;height: 2px;}
   .container.project .card .card-content .more-view:after{height: 100%;width: 2px;}
   .container.project .card .card-content .more-view em:before{width: 100%;height: 2px;}
