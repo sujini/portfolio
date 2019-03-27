@@ -5,6 +5,8 @@ class Home extends Component {
     curIdx=0;
     beforeIndx=undefined;
     timer=undefined;
+   
+    
 
     handleMouseMove(e) {
 
@@ -36,7 +38,7 @@ class Home extends Component {
     pageOutAni(_time,_v){  
         return new Promise(function(resolve) {            
 
-            TweenMax.fromTo('.slide li span', 0.8, {y:"0"},{y:"-100%",onComplete:()=>{
+            TweenMax.fromTo('.slide li span', _time/1000, {y:"0"},{y:"-100%",onComplete:()=>{
                 resolve.call(null, _v);
     
             }});
@@ -112,6 +114,7 @@ class Home extends Component {
     }
     componentDidMount(){
         console.log("home");
+     
         this.next();
         this.timer=setInterval(()=>{
             this.next();
@@ -130,26 +133,26 @@ class Home extends Component {
                     <ul>
                        <li className="">
                            
-                            <div className="l0 t0 w20 h20"><span style={{background:'url(/img/about_img1.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
-                            <div className="l20 t20 w20 h20"><span style={{background:'url(/img/about_img2.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
-                            <div className="l40 t0 w20 h20"><span style={{background:'url(/img/about_img3.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
-                            <div className="l60 t0 w30 h100"><span style={{background:'url(/img/about_img4.jpg) no-repeat center',backgroundSize:'cover'}}></span><span style={{background:'url(/img/about_img4.jpg) no-repeat center',backgroundSize:'cover'}}></span><span style={{background:'url(/img/about_img4.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
+                            <div className="l0 t0 w20 h20"><span style={{background:'#ccc url(/img/about_img1.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
+                            <div className="l20 t20 w20 h20"><span style={{background:'#ccc url(/img/about_img2.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
+                            <div className="l40 t0 w20 h20"><span style={{background:'#ccc url(/img/about_img3.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
+                            <div className="l60 t0 w30 h100"><span style={{background:'#ccc url(/img/about_img4.jpg) no-repeat center',backgroundSize:'cover'}}></span><span style={{background:'url(/img/about_img4.jpg) no-repeat center',backgroundSize:'cover'}}></span><span style={{background:'url(/img/about_img4.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
                             <Link to="/about" onClick={this.handleClick.bind(this)}><h2 data-to="/about"><em>A</em><em>b</em><em>o</em><em>u</em><em>t</em></h2></Link>
                         </li> 
                         <li>
-                            <div className="l0 t80 w20 h20"><span style={{background:'url(/img/project_img4.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
+                            <div className="l0 t80 w20 h20"><span style={{background:'#ccc url(/img/project_img4.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
                             
-                            <div className="l20 t0 w30 h100"><span style={{background:'url(/img/project_img1.jpg) no-repeat center',backgroundSize:'cover'}}></span><span style={{background:'url(/img/project_img1.jpg) no-repeat center',backgroundSize:'cover'}}></span><span style={{background:'url(/img/project_img1.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
-                            <div className="l60 t20 w20 h20"><span style={{background:'url(/img/project_img2.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
-                            <div className="l80 t40 w20 h20"><span style={{background:'url(/img/project_img3.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
+                            <div className="l20 t0 w30 h100"><span style={{background:'#ccc url(/img/project_img1.jpg) no-repeat center',backgroundSize:'cover'}}></span><span style={{background:'url(/img/project_img1.jpg) no-repeat center',backgroundSize:'cover'}}></span><span style={{background:'url(/img/project_img1.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
+                            <div className="l60 t20 w20 h20"><span style={{background:'#ccc url(/img/project_img2.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
+                            <div className="l80 t40 w20 h20"><span style={{background:'#ccc url(/img/project_img3.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
                             <Link to="/project" onClick={this.handleClick.bind(this)}><h2 data-to="/project"><em>P</em><em>r</em><em>o</em><em>j</em><em>e</em><em>c</em><em>t</em></h2></Link>
                            
                         </li> 
                         <li>
                             
-                            <div className="l10 t0 w20 h20"><span style={{background:'url(/img/github_img1.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
-                            <div className="l30 t80 w20 h20"><span style={{background:'url(/img/github_img2.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
-                            <div className="l60 t0 w30 h100"><span style={{background:'url(/img/github_img3.jpg) no-repeat center',backgroundSize:'cover'}}></span><span style={{background:'url(/img/github_img3.jpg) no-repeat center',backgroundSize:'cover'}}></span><span style={{background:'url(/img/github_img3.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
+                            <div className="l10 t0 w20 h20"><span style={{background:'#ccc url(/img/github_img1.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
+                            <div className="l30 t80 w20 h20"><span style={{background:'#ccc url(/img/github_img2.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
+                            <div className="l60 t0 w30 h100"><span style={{background:'#ccc url(/img/github_img3.jpg) no-repeat center',backgroundSize:'cover'}}></span><span style={{background:'url(/img/github_img3.jpg) no-repeat center',backgroundSize:'cover'}}></span><span style={{background:'url(/img/github_img3.jpg) no-repeat center',backgroundSize:'cover'}}></span></div>
                            
                             <a href="http://github.com/sujini" target="_blank" rel="noopener noreferrer"><h2><em>g</em><em>i</em><em>t</em><em>h</em><em>u</em><em>b</em></h2></a>
                           

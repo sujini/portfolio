@@ -11,7 +11,11 @@ class DelayRoute extends Component {
     state={
         shouldRender:this.props.isOpened
     }
-
+    imgAry={
+        about:['/img/about_img1.jpg','/img/about_img2.jpg','/img/about_img3.jpg','/img/about_img4.jpg'],
+        project:['/img/project_img1.jpg','/img/project_img2.jpg','/img/project_img3.jpg'],
+        github:['/img/github_img1.jpg','/img/github_img2.jpg','/img/github_img3.jpg','/img/github_img4.jpg']
+    };
     componentWillReceiveProps(nextProps) {
         console.log(this.props.isOpened,nextProps.isOpened);
         
@@ -45,7 +49,36 @@ class DelayRoute extends Component {
         return nextState.shouldRender;
 
     }
+    
+    imgLoad(){
+        
+        Object.keys(this.imgAry).map(key => {
+        
+            let ary = this.imgAry[key];
+            console.log(ary)
+            for(let i =9;i<ary.length;i++){
+                var img = new Image();
+                img.onload =function(){                   
+                    console.log('image loaded');                   
+                    
+                };
+                img.src = ary[i];
+            }
+            
+            return ary;
+    
+        })
+
+       
+
+
+    }
     componentDidMount(){
+       
+        if(this.props.location.pathname==='/'){
+            this.imgLoad();
+
+        }
         
 
         
@@ -54,6 +87,7 @@ class DelayRoute extends Component {
 
     render() {
         if(this.state.shouldRender){
+    
             return(
             <Switch>
                 <Route exact path="/" component={Home} />
