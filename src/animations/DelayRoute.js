@@ -55,7 +55,6 @@ class DelayRoute extends Component {
         Object.keys(this.imgAry).map(key => {
         
             let ary = this.imgAry[key];
-            console.log(ary)
             for(let i =9;i<ary.length;i++){
                 var img = new Image();
                 img.onload =function(){                   

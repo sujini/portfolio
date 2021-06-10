@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { Provider } from 'react-redux'
-import {firebase} from './config/fbConfig'
-import { createStore, compose } from 'redux'
-import { ReactReduxFirebaseProvider } from 'react-redux-firebase'
+import { Provider } from 'react-redux';
+import {firebase} from './config/fbConfig';
+import { createStore } from 'redux';
+import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
 import { createFirestoreInstance } from 'redux-firestore' // <- needed if using firestore
 
 import rootReducer from './store/reducers/rootReducer';
-import 'react-app-polyfill/ie9'; // For IE 9-11 support
 import 'react-app-polyfill/ie11'; // For IE 11 support
 
      

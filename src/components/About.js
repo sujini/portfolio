@@ -93,12 +93,12 @@ class About extends Component {
             <div className="container about" id="About">
                 <div className="inner">
                     <p>저는 프론트엔드개발자 <em>박수진</em>입니다<br/>
-                    가천대학교 소프트웨어학부 -> 컴퓨터미디어과를 전공하여 컴퓨터 프로그래밍에 입문하여<br/>
+                    가천대학교 소프트웨어학부 -&gt; 컴퓨터미디어과를 전공하여 컴퓨터 프로그래밍에 입문하여<br/>
                     안드로이드 영어공부앱으로 졸업작품으로 졸업하였으니 첫회사에서 웹개발을 하게되어 프론트엔드개발자가되었습니다.<br/>
                         신기술과 트렌드에 관심이 많고 끊임없이 발전하려고 노력하는것을 좋아합니다.
                     </p>
                     <p>
-                        <em>javascript, Reactjs, Redux, threejs, html, css, webpack, nodejs, firebase, mysql</em>
+                        <em>javascript, Reactjs, Redux, Redux-saga, threejs, html, css, webpack, nodejs, firebase, mysql</em>
                     </p>
                 </div>
                 <div className="half_line"></div>
@@ -208,6 +208,18 @@ class About extends Component {
                                 <div className="year_text">푸드빌 운영</div>
                             </div>
                         </li>
+                        <li className="right_box">
+                            <div className="year_box">
+                                <span className="year">2021.02~</span>
+                                <div className="year_text">CJ그룹/공통 운영</div>
+                            </div>
+                        </li>
+                        <li className="right_box">
+                            <div className="year_box">
+                                <span className="year">2021.06~</span>
+                                <div className="year_text">CJ그룹 프로젝트</div>
+                            </div>
+                        </li>
                     </ul>
                     <div className="center_ci">
                         <div className="ci_xiilab mot2 active">
@@ -223,7 +235,7 @@ class About extends Component {
                 </div>
                 
             
-                <p className="bottom_img"><img src="/img/about.jpg" alt=""/></p>
+                <p className="bottom_img"><img src="/images/about.jpg" alt=""/></p>
             </div>
         );
     }

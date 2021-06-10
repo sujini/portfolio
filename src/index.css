@@ -2,35 +2,32 @@
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 500;
-    src: url(/fonts/notokr/notokr-regular.eot);
-    src: url(/fonts/notokr/notokr-regular.eot?#iefix) format('embedded-opentype'),
-    url(/fonts/notokr/notokr-regular.woff2) format('woff2'),
-    url(/fonts/notokr/notokr-regular.woff) format('woff'),
-    url(/fonts/notokr/notokr-regular.ttf) format('truetype'),
-    url(/fonts/notokr/notokr-regular.svg#notokr-regular) format('svg');
+    src: url(./assets/fonts/notokr/notokr-regular.eot);
+    src: url(./assets/fonts/notokr/notokr-regular.eot?#iefix) format('embedded-opentype'),
+    url(./assets/fonts/notokr/notokr-regular.woff2) format('woff2'),
+    url(./assets/fonts/notokr/notokr-regular.woff) format('woff'),
+    url(./assets/fonts/notokr/notokr-regular.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 700;
-    src: url(/fonts/notokr/notokr-medium.eot);
-    src: url(/fonts/notokr/notokr-medium.eot?#iefix) format('embedded-opentype'),
-    url(/fonts/notokr/notokr-medium.woff2) format('woff2'),
-    url(/fonts/notokr/notokr-medium.woff) format('woff'),
-    url(/fonts/notokr/notokr-medium.ttf) format('truetype'),
-    url(/fonts/notokr/notokr-medium.svg#notokr-medium) format('svg');
+    src: url(./assets/fonts/notokr/notokr-medium.eot);
+    src: url(./assets/fonts/notokr/notokr-medium.eot?#iefix) format('embedded-opentype'),
+    url(./assets/fonts/notokr/notokr-medium.woff2) format('woff2'),
+    url(./assets/fonts/notokr/notokr-medium.woff) format('woff'),
+    url(./assets/fonts/notokr/notokr-medium.ttf) format('truetype');
 }
 @font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 900;
-    src: url(/fonts/notokr/notokr-bold.eot);
-    src: url(/fonts/notokr/notokr-bold.eot?#iefix) format('embedded-opentype'),
-    url(/fonts/notokr/notokr-bold.woff2) format('woff2'),
-    url(/fonts/notokr/notokr-bold.woff) format('woff'),
-    url(/fonts/notokr/notokr-bold.ttf) format('truetype'),
-    url(/fonts/notokr/notokr-bold.svg#notokr-bold) format('svg');
+    src: url(./assets/fonts/notokr/notokr-bold.eot);
+    src: url(./assets/fonts/notokr/notokr-bold.eot?#iefix) format('embedded-opentype'),
+    url(./assets/fonts/notokr/notokr-bold.woff2) format('woff2'),
+    url(./assets/fonts/notokr/notokr-bold.woff) format('woff'),
+    url(./assets/fonts/notokr/notokr-bold.ttf) format('truetype');
 }
 /* HTML5 RESET CSS Document */
 

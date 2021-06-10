@@ -133,7 +133,7 @@ body.page-template-tpl-workshop {background-color: #000;}
 .container.project .card .card-img{position: relative;display: block;height: 60%;text-align: center;background-color: #222;background-repeat: no-repeat;background-position: center;background-size: cover}
 .container.project .card .card-img img{width: 10px;opacity: 0;visibility: hidden}
 .container.project .card .card-content .period{padding-bottom:50px}
-.container.project .card .card-content .more-view{position: absolute;bottom:20px;right:20px;padding:0 15px;height: 30px}
+.container.project .card .card-content .more-view{position: absolute;bottom:10px;right:20px;padding:0 15px;height: 30px}
 
 .container.project .card .card-content .more-view em{font-weight: 700;font-size: 15px;line-height: 33px;}
 .container.project .card.hover .card-content .more-view:before{transition:all 0.2s ease-out;width: 100%;}
@@ -144,7 +144,7 @@ body.page-template-tpl-workshop {background-color: #000;}
 .container.project .card .card-content .more-view:after{transition:all 0.2s ease-out;content: '';position: absolute;top:0;right:0;width: 3px;height: 0%;background: #f5cece}
 .container.project .card .card-content .more-view em:before{transition:all 0.2s ease-out;content: '';position: absolute;bottom:0;right:0;width: 0%;height: 3px;background: #f5cece}
 .container.project .card .card-content .more-view em:after{transition:all 0.2s ease-out;content: '';position: absolute;bottom:0;left:0;width: 3px;height: 0%;background: #333}
-.container.project .card .card-content .tag{background: #ddd;border-radius: 10px;padding: 0 5px;margin: 1px 1px;}
+.container.project .card .card-content .tag{background: #ddd;border-radius: 10px;padding: 0 5px;margin: 1px 1px;display: inline-block;}
 .container.project-details .inner{padding: 50px 0 100px}
 .container.project-details table{border-collapse: collapse;font-size:15px;line-height: 20px;width: 100%;}
 
@@ -218,12 +218,12 @@ body.page-template-tpl-workshop {background-color: #000;}
 .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
   left: 10px;
   right: auto;
-  background-image: url(/img/next.png); 
+  background-image: url(./assets/images/next.png); 
 }
 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
   right: 10px;
   left: auto;
-  background-image: url(/img/prev.png);
+  background-image: url(./assets/images/prev.png);
 }
 .swiper-button-disabled{opacity: 0.2;}
 @media screen and (max-width: 800px) {

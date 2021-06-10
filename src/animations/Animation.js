@@ -1,17 +1,9 @@
 import {TweenMax} from 'gsap';
 
 
-let curIdx = 0,nextIdx = 1,bCurIdx=2,bNextIdx,maxLen = 3,isSlide=false;
 
 export default {
-    slideInit(){
-        curIdx = 0;
-        nextIdx = 1;
-        bCurIdx=2;
-        bNextIdx=undefined;
-        maxLen = 3;
-        isSlide=false;
-    },
+
     openPreLoad(_callback){
         TweenMax.set('#header-light',{y:-65});
         TweenMax.to('#open_preload .center_line',0.6,{height:window.innerHeight,ease:"Cubic.easeOut",onComplete:function(){
