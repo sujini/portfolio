@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "firebase": "^8.6.5",
-    "gsap": "^2.1.2",
+    "gsap": "^3.6.0",
     "jquery": "^3.6.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
